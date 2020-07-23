@@ -16,7 +16,7 @@ namespace E_Players_ASPNETCore1.Models
            CreateFolderAndFile(PATH);
         }
         private string PrepararLinha(Notícias n){
-            return $"{n.IdNoticia};{n.Titulo};{n.Imagem}";
+            return $"{n.IdNoticia};{n.Titulo};{n.Texto};{n.Imagem}";
         }
 
         public void Criar(Notícias n)
@@ -34,7 +34,8 @@ namespace E_Players_ASPNETCore1.Models
                 Notícias noticia = new Notícias();
                 noticia.IdNoticia = Int32.Parse(linha[0]);
                 noticia.Titulo = linha[1];
-                noticia.Imagem = linha[2];
+                noticia.Texto  = linha[2];
+                noticia.Imagem = linha[3];
 
                 noticias.Add(noticia);
             }

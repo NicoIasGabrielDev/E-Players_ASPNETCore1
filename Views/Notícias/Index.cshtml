@@ -3,7 +3,7 @@
     ViewData["Title"] = "Notícias";
 }
 
-<form method="POST" action='@Url.Action("Cadastrar")'>
+<form action="@Url.Action("Cadastrar")" method="post" enctype="multipart/form-data">
     <label>ID</label>
     <input type="text" name="IdNotícia" />
 
@@ -14,7 +14,7 @@
     <input type="text" name="Texto" />
 
     <label>Imagem</label>
-    <input type="text" name="Imagem" />
+    <input type="file" name="Imagem" />
 
     <button type="submit">Cadastrar</button>
 </form>
@@ -32,7 +32,7 @@
                 <td>@n.IdNoticia</td>
                 <td>@n.Titulo</td>
                 <td>@n.Texto</td>
-                <td>@n.Imagem</td>
+                <td>@n.Titulo"</td>
             </tr>
         }
     </tbody>
