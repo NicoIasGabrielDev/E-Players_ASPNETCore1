@@ -51,14 +51,15 @@ namespace E_Players_ASPNETCore1.Controllers
             equipeModel.Criar(novaEquipe);            
             ViewBag.Equipes = equipeModel.ReadAll();
 
-            return LocalRedirect("~/Equipe");
+            return RedirectToAction("Index");
         }
 
-        [Route("{id}")]
-        public IActionResult Excluir(int id)
-        {
-            equipeModel.Delete(id);
-            return LocalRedirect("~/Equipe");
+        [Route("[controller]/{itemid}")]
+        public IActionResult Excluir(int itemid){
+            equipeModel.Delete(itemid);
+            ViewBag.Equipes = equipeModel.ReadAll();
+            return RedirectToAction("Index");
+
         }
     }
 }

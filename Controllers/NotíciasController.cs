@@ -55,5 +55,13 @@ namespace E_Players_ASPNETCore1.Controllers
             ViewBag.Noticias =noticiasModel.ReadAll();
             return RedirectToAction("Index");
         }
+
+        [Route("[controller]/{id}")]
+        public IActionResult Excluir(int id){
+            noticiasModel.Delete(id);
+            ViewBag.Equipes = noticiasModel.ReadAll();
+            return RedirectToAction("Index");
+
+        }
     }
 }
