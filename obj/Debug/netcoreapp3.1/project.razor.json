@@ -20541,11 +20541,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\NicolasGabrielLimaCa\\Desktop\\Progamação Senai\\E-Players_ASPNETCore1\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\NicolasGabrielLimaCa\\Desktop\\Progamação Senai\\E-Players_ASPNETCore1\\Views\\Equipe\\Index.cshtml",
       "TargetPath": "Views\\Equipe\\Index.cshtml",
       "FileKind": "mvc"

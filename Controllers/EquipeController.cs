@@ -54,9 +54,9 @@ namespace E_Players_ASPNETCore1.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("[controller]/{itemid}")]
-        public IActionResult Excluir(int itemid){
-            equipeModel.Delete(itemid);
+        [Route("[controller]/Excluir/{id}")]
+        public IActionResult Excluir(int id){
+            equipeModel.Delete(id);
             ViewBag.Equipes = equipeModel.ReadAll();
             return RedirectToAction("Index");
 

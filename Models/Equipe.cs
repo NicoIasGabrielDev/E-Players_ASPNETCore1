@@ -50,10 +50,11 @@ namespace E_Players_ASPNETCore1.Models
             linhas.RemoveAll(n => n.Split(";")[0] == e.IdEquipe.ToString());
         }
 
-        public void Delete(int idEquipe)
+          public void Delete(int id)
         {
             List<string> linhas = ReadAllLinesCSV(PATH);
-            linhas.RemoveAll(n => n.Split(";")[0] == IdEquipe.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            RewriteCSV(PATH, linhas);
         }
     }
 }
